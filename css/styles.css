@@ -58,8 +58,6 @@ img {
 
 .flex-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .section {
@@ -89,9 +87,27 @@ img {
   color: var(--accent-color);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* ================= /COMPONENTS ================= */
 
 /* ================= HEADER ================= */
+
+.header .flex-container {
+  align-items: center;
+}
 
 .header {
   border-bottom: 1px solid #ececec;
@@ -105,11 +121,18 @@ img {
   color: var(--text-color-darck);
 }
 
+.menu-list-item {
+}
+
 .menu-list-item:not(:last-child) {
   margin-right: 50px;
 }
 
 .menu-list-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.33;
@@ -151,23 +174,22 @@ img {
 
 /* ================= /HEADER ================= */
 
-.header {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
 /* ================= HERO ================= */
 
 .hero {
   background-color: #2f303a;
 }
 
-.hero > .container {
-  padding: 200px;
+.hero {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .main-title {
-  padding-bottom: 30px;
+  width: 690px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 
   font-weight: 900;
   font-size: 44px;
@@ -226,10 +248,6 @@ img {
   text-transform: uppercase;
 }
 
-.features-div {
-  margin-bottom: 94px;
-}
-
 .feature-description {
   font-size: 14px;
   line-height: 1.71;
@@ -238,11 +256,27 @@ img {
   color: var(--secondary-text-color);
 }
 
-.activity-list-item:not(:last-child) {
+.features-list-item {
+  width: 270px;
+}
+
+.features-list-item:not(:last-child) {
   margin-right: 30px;
 }
 
 /* ================= /FEATURES ================= */
+
+/* ================= ACTIVITY ================= */
+
+.activity.section {
+  padding-top: 0;
+}
+
+.activity-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* ================= /ACTIVITY ================= */
 
 /* ================= OUR TEAM ================= */
 
@@ -257,12 +291,13 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-list-item:not(last) {
+.team-list-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.team-img {
-  margin-bottom: 30px;
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .team-name {
@@ -274,7 +309,6 @@ img {
 }
 
 .team-role {
-  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -340,6 +374,7 @@ img {
 
 .projects-btn-list {
   margin-bottom: 50px;
+  justify-content: center;
 }
 
 .projects-btn-list-item:not(:last-child) {
@@ -367,7 +402,6 @@ img {
 .active {
   color: var(--text-color-light);
   background: var(--accent-color);
-
 }
 
 .projects-btn-filter:hover,
@@ -392,12 +426,13 @@ img {
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
-  border-left: 1px solid #EEEEEE;
-  border-right: 1px solid #EEEEEE;
-  border-bottom: 1px solid #EEEEEE;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .projects-title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
